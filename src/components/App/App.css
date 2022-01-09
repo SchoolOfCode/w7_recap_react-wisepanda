@@ -21,7 +21,8 @@ h1, h2, h3, h6 {
 
 .blogBody{
 
-    display: left;
-    padding-left: 50px;
+    display:flex;
+    justify-content: center;
+    /* padding-left: 50px; */
 }
 
