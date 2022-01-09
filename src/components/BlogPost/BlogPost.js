@@ -1,15 +1,15 @@
 import React from "react";
 
-function Post({ title, author, datePosted, text, image, alt }) {
+function Post({ title, author, datePosted, text, image}) {
     return <article>
     <h1>{title}</h1>
     <h2>{author}</h2>
-    <h4 className="date">{datePosted}</h4>
+    <h6 className="date">{datePosted}</h6>
     <figure className="framePic"> 
-    <img className="blogPic" src={image}
-     alt = {image.alt}/>
+    <img className="blogPic" src={image.link} alt={image.alt}/>
      </figure>
-    <p className="blogBody">{text} </p>
+     <p>{image.alt}</p>
+    <p>{text}</p>
     {/* <ul>
     {highlights.map(function(item, index){
       return <li key={index}>{item}</li>

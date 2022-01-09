@@ -1,0 +1,27 @@
+h1, h2, h3, h6 {
+    display:flex;
+    justify-content: center; 
+}
+
+.date{
+    display: flex;
+
+}
+
+.framePic{
+    display: flex;
+    justify-content: center;
+
+}
+
+.blogPic{
+    width: 75%;
+    height: auto;
+}
+
+.blogBody{
+
+    display: left;
+    padding-left: 50px;
+}
+
