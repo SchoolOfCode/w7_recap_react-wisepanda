@@ -1,20 +1,26 @@
 import React, {useState} from "react";
 
 function Input({onSubmitClick}){
-    const [newPost, setPost] = useState("");
+    const [newAuthor, setAuthor] = useState("");
+    const [newText, setText] = useState("")
 
-    function handleInput(event){
-        setPost(event.target.value)
+    function handleAuthor(event){
+        setAuthor(event.target.value)
       };
+
+      function handleText(event){
+        setText(event.target.value);
+      }
     
     function handleSubmit(event){
         event.preventDefault();
-        onSubmitClick(newPost);
+        onSubmitClick(newAuthor, newText);
     }
     return (
             <form onSubmit={handleSubmit}>
-              <input onChange={handleInput} value={newPost} />
-              <button>+</button>
+              <input  onChange={handleAuthor} value={newAuthor} />
+              <input  onChange={handleText} value= {newText}/>
+              <button>Submit</button>
             </form>
           );
 }
