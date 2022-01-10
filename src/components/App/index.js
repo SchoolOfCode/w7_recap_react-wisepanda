@@ -13,13 +13,14 @@ import Input from "../CommentForm/CommentForm";
 
 function App() {
   const [post, setPost] = useState(blogPost)
-  const [commentList, setCommentList] = useState([])
+  const [commentList, setCommentList] = useState(comments)
 
-  function addComment(item) {
-    const newComments = [{
-      author: item.commentList,
-      text: item.commentList
-    }]
+  function addComment({author, text}) {
+    const newComments = {
+      // id: comments.length+1,
+      author: author,
+      text: text,
+    }
     console.log(newComments)
     setCommentList([...comments, newComments]);
   }

@@ -3,7 +3,7 @@ import React, {useState} from "react";
 function Input({onSubmitClick}){
     const [newAuthor, setAuthor] = useState("");
     const [newText, setText] = useState("")
-
+ 
     function handleAuthor(event){
         setAuthor(event.target.value)
       };
@@ -14,7 +14,7 @@ function Input({onSubmitClick}){
     
     function handleSubmit(event){
         event.preventDefault();
-        onSubmitClick(newAuthor, newText);
+        onSubmitClick({author:newAuthor, text:newText});
     }
     return (
             <form onSubmit={handleSubmit}>

@@ -5,6 +5,7 @@ function CommentList({author, text}){
         <div>
             <h4>{author}</h4>
             <p>{text}</p>
+            <hr/>
         </div>
     )
 }
